@@ -52,4 +52,14 @@ main {
     .doctor-grid {
         grid-template-columns: 1fr;
     }
+
+    main {
+        margin-inline: none;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    main {
+        margin-inline: none;
+    }
 }
