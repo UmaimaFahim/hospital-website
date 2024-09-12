@@ -1,3 +1,7 @@
+main {
+    margin-inline: 15%;
+}
+
 .heading-text {
     background-color: var(--white);
     border-radius: 1rem;
@@ -26,7 +30,13 @@
     padding: 20px;
     text-align: center;
     border-radius: 1rem;
+    transition: all 0.4s ease;
 }
+
+.doctor-card:hover {
+    transform: scale(1.05);
+}
+
 
 .doctor-card p {
     text-align: center;
