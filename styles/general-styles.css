@@ -23,7 +23,7 @@ header{
 
 header .logo img {
     width: 30%;
-    height: auto;
+    height: 2rem;
 } 
 
 header .logo img {
@@ -87,7 +87,7 @@ header .menu-icon {
 .desktop-nav ul li a {
     color: var(--white);
     text-decoration: none;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: bold;
     padding: 5px 10px;
     transition: background-color 0.3s ease;
