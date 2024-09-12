@@ -95,7 +95,7 @@ form input[type=text], form input[type=email], form input[type=date], form input
 
   input[type=submit] {
     text-align: center;
-    width: 15%;
+    width: auto;
     background-color: #04AA6D;
     color: white;
     padding: 14px 20px;
@@ -108,7 +108,7 @@ form input[type=text], form input[type=email], form input[type=date], form input
   }
 
   input[type=reset] {
-    width: 15%;
+    width: auto;
     background-color: rgb(254, 94, 94);
     color: white;
     padding: 14px 20px;
