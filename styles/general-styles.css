@@ -21,10 +21,14 @@ header{
     
 }
 
-header .logo {
-    width: 45%;
+header .logo img {
+    width: 30%;
     height: auto;
 } 
+
+header .logo img {
+    width: 100%;
+}
 
 .search-bar {
     width: auto;
@@ -158,6 +162,7 @@ footer h3, p {
         width: 25%;
         height: 3rem;
     }
+
 
     body {
         font-size: 20px;
