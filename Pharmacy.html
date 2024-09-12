@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy</title>
+    <link rel="stylesheet" href="styles/general-styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png">
+        </div>
+        
+        <!-- Desktop Navigation Bar -->
+    <nav class="desktop-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About Us.html">About Us</a></li>
+            <li><a href="Our Services.html">Services</a></li>
+            <li><a href="Doctors.html">Doctors</a></li>
+            <li><a href="Consulting Reservation.html">Reservations</a></li>
+            <li><a href="Pharmacy.html">Pharmacy</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <i class="fas fa-search"></i>
+        </div>
+
+    <div class="menu-icon">&#9776;</div>
+    </header>
+
+    <main>
+        <div class="hero">
+            <h2>Your Trusted Health Partner</h2>
+            <p>Convenient, Safe, and Reliable</p>
+        </div>
+        </section>
+
+        <section>
+            <form action="#">
+                <div class="form-section">
+                    <fieldset>
+                        <legend>Patient's Information</legend>
+                        
+                        <div class="form-block">
+                            <label for="name">Full Name</label><br>
+                            <input type="text" id="text1" name="FirstName" value="Enter your name" required><br><br>
+                
+                            <label for="phone_num1">Phone Number</label><br>
+                            <input type="text" maxlength="10" name="Phone Num" id="phone_num1"><br><br>
+                
+                            <label for="email01">Email</label><br>
+                            <input type="email" id="email01" name="Email" required><br><br>
+                
+                            <label for="bday">Medicine Name</label><br>
+                            <input type="text" name="dob" id="bday" required><br><br>
+
+                            <label for="prescription" class="custom-label">Upload your prescription</label>
+                            <input type="file" id="prescription" name="prescription" class="custom-file-input" required><br><br>
+
+                            <label for="medicine">Medicine Name</label>
+                            <select id="medicine" name="medicine" required>
+                                <option value="aspirin">Aspirin</option>
+                                <option value="ibuprofen">Ibuprofen</option>
+                                <option value="panadol">Panadol</option>
+                                <option value="cetrezin">Cetrezin</option>
+                                <option value="cataflam">Cataflam</option>
+                                <option value="meftal">Meftal</option>
+                                <option value="acetaminophen">Acetaminophen (Tylenol)</option>
+                                <option value="amoxicillin">Amoxicillin</option>
+                                <option value="metformin">Metformin</option>
+                                <option value="lisinopril">Lisinopril</option>
+                                <option value="augmentin">Augmentin</option>
+                            </select>
+
+                            <label for="dosage">Dosage</label>
+                            <select id="dosage" name="dosage" required>
+                                <option value="50mg">50mg</option>
+                                <option value="100mg">100mg</option>
+                                <option value="250mg">250mg</option>
+                                <option value="500mg">500mg</option>
+                            </select>
+
+                            <label for="frequency">Frequency</label>
+                            <select id="frequency" name="frequency" required>
+                                <option value="4-hours">Every 4 hours</option>
+                                <option value="6-hours">Every 6 hours</option>
+                                <option value="8-hours">Every 8 hours</option>
+                                <option value="12-hours">Every 12 hours</option>
+                            </select><br><br>
+                
+                            <label for="">Payment Method</label><br>
+                            <input type="radio" value="cash" name="payment-method" id="radio1" checked>
+                            <label for="radio1">Cash</label><br>
+                            <input type="radio" value="card" name="payment-method" id="radio2">
+                            <label for="radio2">Card</label><br>
+                            <input type="radio" value="online" name="payment-method" id="radio3">
+                            <label for="radio3">Online Transaction</label><br>
+                        </div>
+                        
+                    </fieldset>
+                </div>
+
+                <div class="form-buttons">
+                    <input type="submit" name="submit" id="submitbtn">
+                    <input type="reset" name="reset" id="resetbtn">
+                </div>
+            </form>
+        </section> 
+        
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Address</h3>
+                <P>No. 03, Alfred Place,</P>
+                <p>Colombo 3, 0003</p>
+                <p>Sri Lanka</p><br>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Information</h3>
+                <p>+94 123 456 7890</p>
+                <p>info@ekahospital.lk</p>
+            </div>
+
+            <div class="footer-section" id="map" >
+                <h3>Location</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15843.615170920637!2d79.83448168715819!3d6.9021080000000055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2596094db18b9%3A0xb0ffe5ca94529291!2sDurdans%20Hospital!5e0!3m2!1sen!2slk!4v1725215360806!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+        <p>&copy; 2024 EKA Hospital. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

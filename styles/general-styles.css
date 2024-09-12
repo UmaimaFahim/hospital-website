@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --primary-color: #8cc1f1;
+    --primary-color-light: #e8f3fc;
+    --primary-color-dark: #183e9f;
+    --text-dark: black;
+    --text-light: rgb(88, 88, 88);
+    --white: #ffffff;
+}
+
+header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--white);
+    color: var(--text-dark);
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border-radius: 1rem;
+    
+}
+
+header .logo img {
+    width: 80%;
+    height: auto;
+} 
+
+.search-bar {
+    width: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+}
+
+.search-bar input {
+    width: 300px;
+    height: 50px;
+    padding: 10px;
+    padding-right: 20px; /* padding to make room for the icon */
+    font-size: 1rem;
+}
+
+.search-bar i {
+    position: absolute;
+    right: 10px;
+    font-size: 1rem; 
+    color: var(--primary-color-dark); 
+    cursor: pointer;
+}
+
+header .menu-icon { 
+    position: relative;
+    padding-left: 1rem;
+    height: auto;
+    cursor: pointer; /* changes the mouse cursor to a pointer */
+    color: var(--primary-color-dark);
+}
+
+/* Basic Styling for Navigation Bar */
+.desktop-nav {
+    width: auto;
+    display: flex;
+    margin-left: 0.5rem;
+    margin-right: 1rem;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--primary-color-dark);
+    padding: 10px 20px;
+    border-radius: 1rem;
+}
+
+.desktop-nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+}
+
+.desktop-nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+    border-radius: 0.5rem;
+}
+
+.desktop-nav ul li a:hover {
+    background-color: var(--primary-color);
+    color: var(--primary-color-dark);
+}
+
+/* Hide Navigation Bar on Small Screens */
+@media screen and (max-width: 768px) {
+    .desktop-nav {
+        display: none; /* Hide the navigation bar on screens smaller than 768px */
+    }
+
+    .hero-text h4, .hero-text p {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {    
+    .search-bar input {
+        width: 100%; /* Make the search bar full width on small screens */
+    }
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color-dark);
+    color: var(--white);
+    text-align: center;
+    padding: 20px 20px;
+    margin-bottom: 10px;
+    border-radius: 1rem;
+}
+
+footer .footer-container #map iframe {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+footer h3, p {
+    text-align: left;
+}
+
+#map iframe {
+    border-radius: 0.6rem;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .desktop-nav {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1025px) { /* These styles are applied to the footer on the desktop view */
+
+    header {
+        flex-direction: row; 
+        justify-content: space-between;
+        padding: 20px 40px; 
+    }
+
+    header .menu-icon {
+        display: none;
+    }
+
+    .search-bar {
+        height: 3rem;
+    }
+
+    body {
+        font-size: 300;
+    }
+   
+    .footer-container {
+        display: flex;
+        justify-content: space-between; /* Distribute columns evenly */
+        align-items: flex-start;
+        gap: 20px; /* Space between columns */
+        margin-bottom: 20px; /* Space below the columns */
+    }
+    
+    .footer-section {
+        flex: 1; /* Each section takes equal width */
+        padding: 10px;
+        text-align: left;
+    }
+
+    .footer-section p {
+        line-height: 0.8;
+    }
+    
+    .footer-section h3 {
+        margin-bottom: 10px;
+    }
+    
+    #map iframe {
+        width: 100%;
+        height: auto;
+    }
+    
+    footer p {
+        margin-top: 20px;
+    }
+}

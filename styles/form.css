@@ -1,0 +1,190 @@
+.form-section {
+    background-color: var(--white);
+    border-radius: 5px;
+    padding: 5%;
+    margin-bottom: 10px;
+    margin-top: 5px;
+
+}
+
+legend {
+  width: auto ;
+  font-weight: bold;
+  padding-left: 10px;
+  padding-right: 10px ;
+}
+
+main .hero {
+  background: url(../images/pharmacy.png) center no-repeat;
+  background-size: cover;
+  border-radius: 1rem;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: var(--white);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.667);
+  padding: 3rem 2rem;
+  font-size: 2.5rem; /* Adjust the font size as needed */
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.hero h2 {
+  font-size: 3.5rem;
+}
+
+.hero h2, .hero p {
+  margin-left: 20px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero p {
+  margin-bottom: 15px;
+}
+
+fieldset {
+  width: 100%;
+  margin: 0;
+  border: 10px solid transparent; 
+  border-top-color: #183e9f; 
+  box-sizing: border-box; 
+  width: inherit; 
+}
+
+form input[type=text], form input[type=email], form input[type=date], form input[type=textarea], form select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    background-color: #e2eaf1;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+  }
+
+  .form-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .custom-file-input {
+    display: none;
+}
+
+.custom-label::after {
+  content: 'Select File';
+  background-color: var(--primary-color-dark);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-left: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.custom-label:hover::before {
+  background-color: #45a049;
+}
+
+  input[type=submit] {
+    text-align: center;
+    width: 15%;
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+  }
+
+  input[type=reset] {
+    width: 15%;
+    background-color: rgb(254, 94, 94);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+  }
+  
+  /* Add a background color to the submit button on mouse-over */
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+  input[type=reset]:hover {
+    background-color: rgb(253, 71, 71);
+  }
+
+  @media screen and (min-width: 1024px) {
+    body section {
+      padding: 40px; /* Increase padding for sections */
+      margin: 10px 0; /* Increase margin between sections */
+      margin-left: 15%;
+      margin-right: 15%;
+  }
+
+  .hero #mob_only {
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  
+  main .hero {
+    height: 200px;
+  }
+
+  main .hero h2, .hero p {
+    display: none;
+  }
+
+  fieldset {
+      width: 100%; /* Ensures full width of the container */
+      padding: 10px;
+      margin: 0 auto; /* Center-align the fieldset */
+  }
+
+  input[type="text"], input[type="email"], input[type="date"], textarea {
+      width: 100%; /* Full width for input fields */
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+  }
+
+  form input[type=text], form input[type=email], form input[type=date], form input[type=textarea], form select {
+    font-size: 1rem;
+  }
+
+  .form-block {
+      padding: 0;
+  }
+
+  .form-section {
+      margin: 10px 0;
+  }
+
+  /* For narrower viewports, reducing the width of the submit buttons */
+  .form-buttons input[type="submit"], .form-buttons input[type="reset"] {
+      width: 100%;
+      padding: 5px;
+  }
+}
+
+
+  

@@ -1,0 +1,151 @@
+section {
+    background-color: var(--white);
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.location-block {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.branch {
+    width: 50%;
+    padding: 2rem;
+}
+
+.branch-info {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+
+.branch-info h2 {
+    margin-bottom: 10px;
+}
+
+.branch-info p {
+    margin-bottom: 10px;
+}
+
+.branch-map iframe {
+    width: 10vw;
+    height: 20vh;
+}
+
+.branch-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); 
+}
+
+.summary-table {
+    padding: 20px;
+}
+
+.summary-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.summary-table th, .summary-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.summary-table th {
+    background-color: var(--primary-color-light);
+}
+
+.summary-table tfoot {
+    background-color: var(--primary-color-light);
+    font-weight: bold;
+}
+
+tbody tr:nth-child(odd){
+    background-color: var(--primary-color-light);
+}
+
+@media screen and (max-width: 768px) { /* Styles for mobile view */
+    .location-block {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .branch {
+        width: 100%;
+    }
+
+    .branch-info, .branch-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .branch-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .branch-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    table th {
+        display: none;
+    }
+
+    table {
+        text-align: center;
+    }
+
+    table thead, tbody, tfoot, th, td, tr{
+        display: block;
+        width: 100%;    
+        text-align: center;
+    }
+
+    td {
+        word-wrap: break-word;
+        word-break: break-word;
+        padding: 8px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    table td::before{
+        content: attr(data-label);
+        font-weight: bold;
+    }
+
+    .summary-table th, .summary-table td {
+        text-align: center;
+        border: none;
+    }
+
+    .department-name {
+        font-weight: bold;
+    }
+
+    .branch-map iframe {
+        width: 100%;
+        height: auto;
+    }
+
+    section {
+        margin: none;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    main{
+        margin-inline: 15%;
+    }    
+}
+
