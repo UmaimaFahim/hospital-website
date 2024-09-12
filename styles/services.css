@@ -44,8 +44,8 @@
     background-color: var(--primary-color-light);
     text-align: center;
     flex: 0 0 22%;
-    min-width: 300px;
-    max-width: 400px;
+    min-width: 250px;
+    max-width: 300px;
     margin-bottom: 30px;
     border-radius: 10px;
 }
