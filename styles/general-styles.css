@@ -140,7 +140,7 @@ footer h3, p {
     }
 }
 
-@media screen and (min-width: 1025px) { /* These styles are applied to the footer on the desktop view */
+@media screen and (min-width: 1024px) { /* These styles are applied to the footer on the desktop view */
     header {
         flex-direction: row; 
         justify-content: space-between;
@@ -152,7 +152,7 @@ footer h3, p {
     }
 
     .search-bar {
-        width: 25%;
+        width: 20%;
         height: 3rem;
     }
 
