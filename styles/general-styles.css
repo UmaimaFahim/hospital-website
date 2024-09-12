@@ -11,7 +11,7 @@
 
 header{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     background-color: var(--white);
     color: var(--text-dark);
@@ -22,30 +22,29 @@ header{
 }
 
 header .logo img {
-    width: 100%;
-    height: 2rem;
+    width: 150px;
+    height: auto;
 } 
 
 .search-bar {
-    width: auto;
-    position: relative;
     display: flex;
     align-items: center;
-
+    position: relative;
 }
 
 .search-bar input {
-    width: 300px;
-    height: 50px;
-    padding: 10px;
-    padding-right: 20px; /* padding to make room for the icon */
-    font-size: 1rem;
+    width: 200px;
+    padding: 8px 10px;
+    border-radius: 5px;
+}
+
+.search-bar input::placeholder {
+    color: #888;
 }
 
 .search-bar i {
     position: absolute;
     right: 10px;
-    font-size: 1rem; 
     color: var(--primary-color-dark); 
     cursor: pointer;
 }
@@ -64,7 +63,7 @@ header .menu-icon {
     display: flex;
     margin-left: 0.5rem;
     margin-right: 1rem;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     background-color: var(--primary-color-dark);
     padding: 10px 20px;
@@ -72,12 +71,11 @@ header .menu-icon {
 }
 
 .desktop-nav ul {
-    list-style: none;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin: 0;
-    padding: 0;
+    gap: 20px;
+    background-color: var(--primary-color-dark);
+    padding: 10px 20px;
+    border-radius: 20px;
 }
 
 .desktop-nav ul li a {
@@ -88,7 +86,7 @@ header .menu-icon {
     padding: 5px 10px;
     transition: background-color 0.3s ease;
     white-space: nowrap;
-    border-radius: 0.5rem;
+    border-radius: 10px;
 }
 
 .desktop-nav ul li a:hover {
