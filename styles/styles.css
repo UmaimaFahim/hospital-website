@@ -160,7 +160,7 @@ ul li, ol li {
         display: block;
     }
 
-    .hero-text h2 {
+    .hero-image h2 {
         font-size: 1.5rem;
     }
 
@@ -168,10 +168,6 @@ ul li, ol li {
         width: 100%;
         object-fit: cover;
     } 
-
-    .hero-text button {
-        display: none;
-    }
 
     #services-block, #contact-block {
         flex-direction: column-reverse;
