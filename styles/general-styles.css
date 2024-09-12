@@ -61,8 +61,6 @@ header .menu-icon {
 .desktop-nav {
     width: 50%;
     display: flex;
-    margin-left: 0.5rem;
-    margin-right: 1rem;
     justify-content: space-between;
     align-items: center;
     background-color: var(--primary-color-dark);
