@@ -26,10 +26,6 @@ header .logo img {
     height: 2rem;
 } 
 
-header .logo img {
-    width: 40%;
-}
-
 .search-bar {
     width: auto;
     position: relative;
