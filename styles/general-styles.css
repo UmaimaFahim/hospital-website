@@ -22,7 +22,7 @@ header{
 }
 
 header .logo img {
-    width: 150px;
+    width: 200px;
     height: auto;
 } 
 
@@ -71,11 +71,12 @@ header .menu-icon {
 }
 
 .desktop-nav ul {
+    list-style: none;
     display: flex;
-    gap: 20px;
-    background-color: var(--primary-color-dark);
-    padding: 10px 20px;
-    border-radius: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
 }
 
 .desktop-nav ul li a {
@@ -86,7 +87,7 @@ header .menu-icon {
     padding: 5px 10px;
     transition: background-color 0.3s ease;
     white-space: nowrap;
-    border-radius: 10px;
+    border-radius: 0.5rem;
 }
 
 .desktop-nav ul li a:hover {
