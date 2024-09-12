@@ -19,11 +19,11 @@ body {
     font-family: "Poppins", sans-serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 25px;
     line-height: 1.6; /* Defines the amount of space between lines of text */
     background-color: var(--primary-color);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);   
     padding: 20px;
+    font-size: 2rem;
 }
 
 /* Hero Image Section */
@@ -148,7 +148,6 @@ ul li, ol li {
 
 
 @media screen and (max-width: 768px) { /* Styles for mobile view */
-
     body {
         font-size: 20px;
     }
