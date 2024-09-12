@@ -62,9 +62,9 @@ header .menu-icon {
     color: var(--primary-color-dark);
 }
 
-/* Basic Styling for Navigation Bar */
+/* Styling for Navigation Bar */
 .desktop-nav {
-    width: auto;
+    width: 50%;
     display: flex;
     margin-left: 0.5rem;
     margin-right: 1rem;
