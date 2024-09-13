@@ -141,6 +141,7 @@ ul li, ol li {
 
     #hero-section {
         background: url(../images/hero-image-mobile.webp);
+        background-size: cover;
         height: 30vh;
         width: 100%;
     }
