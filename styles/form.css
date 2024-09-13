@@ -25,7 +25,7 @@ main .hero {
   color: var(--white);
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.667);
   padding: 3rem 2rem;
-  font-size: 2.5rem; /* Adjust the font size as needed */
+  font-size: 2.5rem; 
 }
 
 @keyframes fadeIn {
@@ -120,7 +120,6 @@ form input[type=text], form input[type=email], form input[type=date], form input
     font-size: 1rem;
   }
   
-  /* Add a background color to the submit button on mouse-over */
   input[type=submit]:hover {
     background-color: #45a049;
   }
@@ -154,13 +153,13 @@ form input[type=text], form input[type=email], form input[type=date], form input
   }
 
   fieldset {
-      width: 100%; /* Ensures full width of the container */
+      width: 100%; 
       padding: 10px;
-      margin: 0 auto; /* Center-align the fieldset */
+      margin: 0 auto; 
   }
 
   input[type="text"], input[type="email"], input[type="date"], textarea {
-      width: 100%; /* Full width for input fields */
+      width: 100%; 
       padding: 10px;
       margin-top: 5px;
       margin-bottom: 15px;
