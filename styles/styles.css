@@ -104,13 +104,13 @@ body {
 }
 
 #services-block img, #departments-block img, #contact-block img  {
-        border-radius: 5px;
-        width: 50%;
-        height: auto;
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-        margin-top: 5px;
-        margin-bottom: 5px;
-        margin-inline: 10px;
+    border-radius: 5px;
+    width: 50%;
+    height: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-inline: 10px;
 }
 
 .block .text-container {
@@ -141,7 +141,7 @@ ul li, ol li {
     }
 
     #hero-section {
-        background: none;
+        background: url(../images/hero-image-mobile.webp);
         height: 30vh;
         width: 100%;
     }
@@ -227,8 +227,5 @@ ul li, ol li {
         align-items: center;
     }
     
-    .hero-image {
-        display: none;
-    }
 }
 
