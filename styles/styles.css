@@ -27,7 +27,6 @@ body {
 
 /* Hero Image Section */
 #hero-section {
-    background-color: var(--primary-color-dark);
     border-radius: 1rem;
     position: relative ;
     max-width: 100%;
