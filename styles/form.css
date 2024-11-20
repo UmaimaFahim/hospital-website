@@ -7,12 +7,41 @@
 
 }
 
+.form-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-block label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-block label input {
+  width: 50px; /* Small box shape */
+  height: 30px; /* Adjust height for uniformity */
+  text-align: center; /* Center-align the text inside the input field */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-left: auto; /* Push the input to the far right */
+}
+
+input[type=number] {
+  font-size: 1rem;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
 legend {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  color: #183e9f;
   width: auto ;
   font-weight: bold;
-  padding-left: 10px;
-  padding-right: 10px ;
-}
+  }
 
 main .hero {
   background: url(../images/pharmacy.png) center no-repeat;
@@ -57,25 +86,26 @@ fieldset {
 }
 
 form input[type=text], form input[type=email], form input[type=date], form input[type=textarea], form select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    background-color: #e2eaf1;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-    font-size: 1rem;
-  }
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  background-color: #e2eaf1;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+}
 
-  .form-buttons {
-    display: flex;
-    justify-content: space-between;
-  }
+.form-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 15px;
+}
 
-  .custom-file-input {
-    display: none;
+.custom-file-input {
+  display: none;
 }
 
 .custom-label::after {
@@ -93,47 +123,49 @@ form input[type=text], form input[type=email], form input[type=date], form input
   background-color: #45a049;
 }
 
-  input[type=submit] {
-    text-align: center;
-    width: auto;
-    background-color: #04AA6D;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-family: "Poppins", sans-serif;
-    font-size: 1rem;
-  }
+input[type=submit] {
+  text-align: center;
+  width: 25%;
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+}
 
-  input[type=reset] {
-    width: auto;
-    background-color: rgb(254, 94, 94);
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-family: "Poppins", sans-serif;
-    font-size: 1rem;
-  }
+input[type=reset] {
+  width: auto;
+  background-color: rgb(254, 94, 94);
+  width: 25%;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  margin-right: 15px;
+}
   
-  input[type=submit]:hover {
-    background-color: #45a049;
-  }
+input[type=submit]:hover {
+  background-color: #45a049;
+}
 
-  input[type=reset]:hover {
-    background-color: rgb(253, 71, 71);
-  }
+input[type=reset]:hover {
+  background-color: rgb(253, 71, 71);
+}
 
-  @media screen and (min-width: 1024px) {
-    body section {
-      padding: 40px; /* Increase padding for sections */
-      margin: 10px 0; /* Increase margin between sections */
-      margin-left: 15%;
-      margin-right: 15%;
+@media screen and (min-width: 1024px) {
+  body section {
+    padding: 40px; /* Increase padding for sections */
+    margin: 10px 0; /* Increase margin between sections */
+    margin-left: 15%;
+    margin-right: 15%;
   }
 
   .hero #mob_only {
@@ -174,6 +206,17 @@ form input[type=text], form input[type=email], form input[type=date], form input
       padding: 0;
   }
 
+  .form-block label {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .form-block label input {
+    width: 50px;
+    height: 30px;
+  }
+
   .form-section {
       margin: 10px 0;
   }
@@ -182,6 +225,7 @@ form input[type=text], form input[type=email], form input[type=date], form input
   .form-buttons input[type="submit"], .form-buttons input[type="reset"] {
       width: 100%;
       padding: 5px;
+      margin-inline: 5px;
   }
 }
 
