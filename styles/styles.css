@@ -176,8 +176,10 @@ ul li, ol li {
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     #hero-section {
-        background: url(../images/hero-image-mobile.webp) contain;
-        background-position: center right;
+        background-image: url(../images/hero-image-mobile.webp);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
     }
 
     #services-block img, #contact-block img, #departments-block img {
@@ -196,8 +198,8 @@ ul li, ol li {
     }
 
     .block {
-        margin-left: none;
-        margin-right: none;
+        margin-left: 0;
+        margin-right: 0;
         width: 100%;
     }
 

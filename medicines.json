@@ -1,0 +1,41 @@
+[{
+    "analgesics": [
+      { "name": "Paracetamol", "price": 50, "image": "images/medicine/paracetamol.webp" },
+      { "name": "Ibuprofen", "price": 120, "image": "images/medicine/ibuprofen.webp" },
+      { "name": "Aspirin", "price": 80, "image": "images/medicine/aspirin.webp" },
+      { "name": "Naproxen", "price": 150, "image": "images/medicine/naproxen.webp" },
+      { "name": "Diclofenac", "price": 100, "image": "images/medicine/diclofenac.webp" },
+      { "name": "Ketorolac", "price": 200, "image": "images/medicine/ketorolac.webp" }
+    ],
+    "antibiotics": [
+      { "name": "Amoxicillin", "price": 300, "image": "images/medicine/amoxicillin.webp" },
+      { "name": "Ciprofloxacin", "price": 250, "image": "images/medicine/ciprofloxacin.webp" },
+      { "name": "Doxycycline", "price": 400, "image": "images/medicine/doxycycline.webp" },
+      { "name": "Metronidazole", "price": 350, "image": "images/medicine/metronidazole.webp" },
+      { "name": "Azithromycin", "price": 500, "image": "images/medicine/azithromycin.webp" },
+      { "name": "Cephalexin", "price": 450, "image": "images/medicine/cephalexin.webp" }
+    ],
+    "antidepressants": [
+      { "name": "Fluoxetine", "price": 900, "image": "images/medicine/fluoxetine.webp" },
+      { "name": "Sertraline", "price": 850, "image": "images/medicine/sertraline.webp" },
+      { "name": "Escitalopram", "price": 950, "image": "images/medicine/escitalopram.webp" },
+      { "name": "Venlafaxine", "price": 1100, "image": "images/medicine/venlafaxine.webp" },
+      { "name": "Bupropion", "price": 1200, "image": "images/medicine/bupropion.webp" },
+      { "name": "Duloxetine", "price": 1050, "image": "images/medicine/duloxetine.webp" }
+    ],
+    "antihistamines": [
+      { "name": "Loratadine", "price": 180, "image": "images/medicine/loratadine.webp" },
+      { "name": "Cetirizine", "price": 160, "image": "images/medicine/cetirizine.webp" },
+      { "name": "Diphenhydramine", "price": 200, "image": "images/medicine/diphenhydramine.webp" },
+      { "name": "Fexofenadine", "price": 220, "image": "images/medicine/fexofenadine.webp" }
+    ],
+    "antihypertensives": [
+      { "name": "Amlodipine", "price": 500, "image": "images/medicine/amlodipine.webp" },
+      { "name": "Losartan", "price": 550, "image": "images/medicine/losartan.webp" },
+      { "name": "Enalapril", "price": 600, "image": "images/medicine/enalapril.webp" },
+      { "name": "Metoprolol", "price": 700, "image": "images/medicine/metoprolol.webp" },
+      { "name": "Hydrochlorothiazide", "price": 650, "image": "images/medicine/hydrochlorothiazide.webp" },
+      { "name": "Valsartan", "price": 750, "image": "images/medicine/valsartan.webp" }
+    ]
+  }]
+  

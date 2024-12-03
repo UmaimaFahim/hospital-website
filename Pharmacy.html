@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="hospital, ">
     <title>Pharmacy</title>
-    <link rel="stylesheet" href="styles/general-styles.css">
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/general-styles.css">
+    <link rel="stylesheet" href="styles/pharmacy.css">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
@@ -15,225 +16,78 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="manifest" href="manifest.json">
 </head>
-
 <body>
-    <header>
+
+        <header>
         <div class="logo">
-            <a href="index.html">
-            <img src="images/logo.png" alt="Medical staff in scrubs and white coats converse in a storeroom filled with medical supplies.">
-            </a>
+        <a href="index.html">
+            <img src="images/logo.png" alt="EKA Hospital Logo">
+        </a>
         </div>
-        
-        <!-- Desktop Navigation Bar -->
-    <nav class="desktop-nav">
+
+        <nav class="desktop-nav">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="About Us.html">About Us</a></li>
-            <li><a href="Our Services.html">Services</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="our-services.html">Services</a></li>
             <li><a href="Doctors.html">Doctors</a></li>
-            <li><a href="Consulting Reservation.html">Reservations</a></li>
+            <li><a href="consulting-reservation.html">Reservations</a></li>
             <li><a href="Pharmacy.html">Pharmacy</a></li>
             <li><a href="contact.html">Contact Us</a></li>
         </ul>
-    </nav>
+        </nav>
 
-    <div class="search-bar">
+        <div class="search-bar">
             <input type="text" placeholder="Search...">
             <i class="fas fa-search"></i>
         </div>
 
-    <div class="menu-icon">&#9776;</div>
+        <div class="menu-icon">&#9776;</div>
     </header>
 
     <main>
         <div class="hero">
-            <h2>24/7 Pharmacy Services</h2>
-            <p>EKA. Your Trusted Health Partner</p>
+            <div class="hero-content">
+            <h1>EKA Pharmacy. Open 24 hours</h1>
+            <p>You can use our online pharmacy service to purchase your prescription and OTC drugs online. Our team will deliver your medication to your door step on time.</p>
+            <p>Trust in us for all your healthcare needs.</p>
+            <button>Learn More</button>
+            </div>
         </div>
-        </section>
-
 
         <section>
-            <form action="#">
-                <div class="form-section">
-                    <fieldset>
-                        <div class="form-block">
-                            <div id="Analgesics">
-                                <legend>Analgesics</legend>
-                                <label for="Aspirin">Aspirin
-                                    <input type="number" name="qty-aspirin" id="Aspirin" min="0"><br>
-                                </label>
-
-                                <label for="Ibuprofen">Ibuprofen
-                                    <input type="number" name="qty-ibuprofen" id="Ibuprofen" min="0"><br>
-                                </label>
-
-                                <label for="Naproxen">Naproxen
-                                    <input type="number" name="qty-naproxen" id="Naproxen" min="0"><br>
-                                </label>
-
-                                <label for="Tylenol">Tylenol
-                                    <input type="number" name="qty-tylenol" id="Tylenol" min="0"><br>
-                                </label>
-
-                                <label for="Morphine">Morphine
-                                    <input type="number" name="qty-morphine" id="Morphine" min="0"><br>
-                                </label>
-
-                                <label for="Codeine">Codeine
-                                    <input type="number" name="qty-codeine" id="Codeine" min="0"><br>
-                                </label>
-
-                                <label for="Codeine">Codeine    
-                                    <input type="number" name="qty-codeine" id="Codeine" min="0"><br>
-                                </label>
-                            </div>
-
-                            <div id="Amoxicillin">
-                                <legend>Antibiotics</legend>
-                                <label for="Amoxicillin">Amoxicillin
-                                    <input type="number" name="medicine" id="Amoxicillin" min="0"><br>
-                                </label>
-
-                                <label for="Penicillin">Penicillin
-                                    <input type="number" name="medicine" id="Penicillin" min="0"><br>
-                                </label>
-
-                                <label for="Naproxen">Naproxen
-                                    <input type="number" name="medicine" id="Naproxen" min="0"><br>
-                                </label>
-
-                                <label for="Tylenol">Tylenol
-                                    <input type="number" name="medicine" id="Tylenol" min="0"><br>
-                                </label>
-
-                                <label for="Morphine">Morphine
-                                    <input type="number" name="medicine" id="Morphine" min="0"><br>
-                                </label>
-
-                                <label for="Codeine">Codeine
-                                    <input type="number" name="medicine" id="Codeine" min="0"><br>
-                                </label>
-
-                                <label for="Codeine">Codeine    
-                                    <input type="number" name="medicine" id="Codeine" min="0"><br>
-                                </label>
-                            </div>
-
-                            <div id="Antidepressants">
-                                <legend>Antidepressants</legend>
-                                <label for="Fluoxetine">Fluoxetine
-                                    <input type="number" name="medicine" id="Fluoxetine" min="0"><br>
-                                </label>
-                            
-                                <label for="Sertraline">Sertraline
-                                    <input type="number" name="medicine" id="Sertraline" min="0"><br>
-                                </label>
-                            
-                                <label for="Duloxetine">Duloxetine
-                                    <input type="number" name="medicine" id="Duloxetine" min="0"><br>
-                                </label>
-                            
-                                <label for="Amitriptyline">Amitriptyline
-                                    <input type="number" name="medicine" id="Amitriptyline" min="0"><br>
-                                </label>
-                            
-                                <label for="Bupropion">Bupropion
-                                    <input type="number" name="medicine" id="Bupropion" min="0"><br>
-                                </label>
-                            
-                                <label for="Trazodone">Trazodone
-                                    <input type="number" name="medicine" id="Trazodone" min="0"><br>
-                                </label>
-                            </div>
-
-                            <div id="Antihistamines">
-                                <legend>Antihistamines</legend>
-                                <label for="Diphenhydramine">Diphenhydramine
-                                    <input type="number" name="medicine" id="Diphenhydramine" min="0"><br>
-                                </label>
-                            
-                                <label for="Loratadine">Loratadine
-                                    <input type="number" name="medicine" id="Loratadine" min="0"><br>
-                                </label>
-                            
-                                <label for="Cetirizine">Cetirizine
-                                    <input type="number" name="medicine" id="Cetirizine" min="0"><br>
-                                </label>
-                            
-                                <label for="Fexofenadine">Fexofenadine
-                                    <input type="number" name="medicine" id="Fexofenadine" min="0"><br>
-                                </label>
-                            
-                                <label for="Chlorpheniramine">Chlorpheniramine
-                                    <input type="number" name="medicine" id="Chlorpheniramine" min="0"><br>
-                                </label>
-                            
-                                <label for="Levocetirizine">Levocetirizine
-                                    <input type="number" name="medicine" id="Levocetirizine" min="0"><br>
-                                </label>
-                            </div>
-
-                            <div id="Antihypertensives">
-                                <legend>Antihypertensives</legend>
-                                <label for="Amlodipine">Amlodipine
-                                    <input type="number" name="medicine" id="Amlodipine" min="0"><br>
-                                </label>
-                            
-                                <label for="Lisinopril">Lisinopril
-                                    <input type="number" name="medicine" id="Lisinopril" min="0"><br>
-                                </label>
-                            
-                                <label for="Losartan">Losartan
-                                    <input type="number" name="medicine" id="Losartan" min="0"><br>
-                                </label>
-                            
-                                <label for="Hydrochlorothiazide">Hydrochlorothiazide
-                                    <input type="number" name="medicine" id="Hydrochlorothiazide" min="0"><br>
-                                </label>
-                            
-                                <label for="Metoprolol">Metoprolol
-                                    <input type="number" name="medicine" id="Metoprolol" min="0"><br>
-                                </label>
-                            
-                                <label for="Enalapril">Enalapril
-                                    <input type="number" name="medicine" id="Enalapril" min="0"><br>
-                                </label>
-                            </div>
-                       
-                    </fieldset>
-                    <div class="form-buttons">
-                        <input type="submit" name="submit" id="submitbtn">
-                        <input type="reset" name="reset" id="resetbtn">
-                    </div>
-
-                </div>
-
-            </form>
-
-            <div>
-                <table id="orderSummary">
-                    <thead>
-                        <tr>
-                            <th>Medicine</th>
-                            <th>Quantity</th>
-                            <th>Price</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Dynamically updated rows -->
-                    </tbody>
-                </table>
-                <p>Total Price: <span id="total-price">$0</span></p>
-            </div>
-                
-            <div>
-                <button type="button" onclick="saveFavourite()">Add to Favourites</button>
-                <button type="button" onclick="applyFavourite()">Apply Favourites</button>
-                <button type="button" onclick="buyNow()">Buy Now</button>
-            </div>
-        </section> 
+            <h1>Order Medicines</h1>
+    
+            <div id="medicines"></div>
         
+            <h2>Order Summary</h2>
+            <table id="orderSummary">
+            <thead>
+                <tr>
+                <th class="round">Unit Name</th>
+                <th>Unit Price</th>
+                <th>Qty (Units Bought)</th>
+                <th>Total</th>
+                <th class="round">Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+            </table>
+            
+            <div>
+            <button id="buyNow">Buy Now</button>
+            </div>
+        
+            <div>
+            <button id="addToFavorites">Add to Favorites</button>
+            <button id="applyFavorites">Apply Favorites</button>
+            </div>
+            
+            <script src="medicines.json"></script>
+            <script src="./scripts/pharmacy.js" defer></script>
+        </section>
+
     </main>
 
     <footer>
@@ -248,19 +102,17 @@
             <div class="footer-section">
                 <h3>Contact Information</h3>
                 <p>+94 123 456 7890</p>
-                <p>info@ekahospital.lk</p><br>
+                <p>info@ekahospital.lk</p>
             </div>
 
-            <div class="footer-section" id="map" >
+            <div class="footer-section" id="map">
                 <h3>Location</h3>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15843.615170920637!2d79.83448168715819!3d6.9021080000000055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2596094db18b9%3A0xb0ffe5ca94529291!2sDurdans%20Hospital!5e0!3m2!1sen!2slk!4v1725215360806!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15843.615170920637!2d79.83448168715819!3d6.9021080000000055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2596094db18b9%3A0xb0ffe5ca94529291!2sDurdans%20Hospital!5e0!3m2!1sen!2slk!4v1725215360806!5m2!1sen!2slk" description="Link to the map of the main hospital branch" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
 
         <p>&copy; 2024 EKA Hospital. All rights reserved.</p>
-    </footer>
-
-    <script src="./scripts/script.js defer"></script>
+    </footer>  
 </body>
 
 </html>
