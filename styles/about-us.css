@@ -139,7 +139,7 @@ tbody tr:nth-child(odd){
     }
 
     section {
-        margin: none;
+        margin: 0;
     }
 }
 

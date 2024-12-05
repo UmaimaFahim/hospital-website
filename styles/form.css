@@ -85,6 +85,26 @@ fieldset {
   width: inherit; 
 }
 
+
+/* Display labels inline with radio buttons */
+label {
+  display: inline-flex;
+  align-items: center; /* Align radio button and text vertically */
+  margin-right: 15px; /* Add spacing between label groups */
+  font-size: 16px; /* Adjust text size */
+  cursor: pointer; /* Add a pointer cursor for better UX */
+}
+
+/* Add spacing between radio button and text */
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+/* Optional: Custom styling for the selected radio button */
+input[type="radio"]:checked {
+  accent-color: #1e90ff; /* Change to match your theme's primary color */
+}
+
 form input[type=text], form input[type=email], form input[type=date], form input[type=textarea], form select {
   width: 100%;
   padding: 12px 20px;

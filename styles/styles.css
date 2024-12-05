@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
 
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /*For consistent layouts and to standardise element sizing across the webpage*/
+    box-sizing: border-box;
 }
 
-:root{
+:root {
     --primary-color: #8cc1f1;
     --primary-color-dark: #183e9f;
     --text-dark: black;
@@ -18,216 +18,98 @@
 body {
     font-family: "Poppins", sans-serif;
     font-weight: 300;
-    font-style: normal;
-    line-height: 1.6; /* Defines the amount of space between lines of text */
+    line-height: 1.6;
     background-color: var(--primary-color);
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);   
     padding: 20px;
 }
 
 /* Hero Image Section */
 #hero-section {
     border-radius: 1rem;
-    position: relative ;
+    position: relative;
     max-width: 100%;
     height: 50vh;
     overflow: hidden;
     margin-bottom: 1rem;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
     background: url(../images/hero-image.webp) center;
-    background-position: center right;
     background-size: cover;
     display: flex;
     align-items: center;
 }
 
-.hero-text h2 {
-    font-size: 3rem; 
-}
-
-.hero-text h4 {
-    font-weight: 400;
-    margin-bottom: 0.5rem;
-    font-size: 1.7rem;
-}
-
 .hero-text {
     width: 60%;
-}
-
-.hero-text p {
-    color: var(--primary-color-text);
-    font-size: 1.5rem;
-    text-shadow: none;
-}
-
-.hero-text {
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-    text-align: left;
-    line-height: 1.2;
     color: var(--white);
+    padding: 3rem 2rem;
+}
+
+.blocks {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 3rem 2rem;
-    font-size: 2.3rem; /* Adjust the font size as needed */
-    animation: fadeIn 2s ease-in-out;
 }
 
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-/* Introduction Section*/
-#introduction {
-    background-color: var(--white);
-    margin: 0px 0 0 0;
-    text-align: center;
-}
-
-#introduction h2 {
-    color: var(--primary-color-dark);
-    text-align: center;
-    margin-bottom: 0.5rem;
-    font-size: 1.75rem;
-    position: absolute;
-}
-
+/* Block Section Styles */
 .block {
     background-color: var(--white);
     border-radius: 5px;
     padding: 5%;
-    margin-bottom: 10px;
-    margin-top: 5px;
-}
-
-#services-block img, #departments-block img, #contact-block img  {
-    border-radius: 5px;
-    width: 50%;
-    height: auto;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-inline: 10px;
-}
-
-.block .text-container {
-    margin-inline: 20px;
+    margin: 20px auto;
 }
 
 #services-block, #departments-block, #contact-block {
     display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+    flex: row;
     align-items: center;
+    justify-content: space-between;
+    gap: 20px;
 }
 
-/* Lists */
-ul, ol {
-    margin: 10px 0;
-    padding-left: 20px;
+.text-container {
+    padding-inline: 1rem;
 }
 
-ul li, ol li {
-    margin-bottom: 5px;
+#services-block img, #departments-block img, #contact-block img {
+    border-radius: 5px;
+    width: 50%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
+/* #services-block .text-container, #contact-block .text-container {
+    order: 1;
+} */
 
-@media screen and (max-width: 768px) { /* Styles for mobile view */
-    body {
-        font-size: 20px;
-    }
+#departments-block .text-container {
+    order: 2;
+} */
 
+/* Responsive Layout */
+{@media screen and (max-width: 768px) {
     #hero-section {
-        background: url(../images/hero-image-mobile.webp);
-        background-size: cover;
         height: 30vh;
+        background-size: cover;
+    }
+
+    #services-block, #departments-block, #contact-block {
+        flex-direction: column;
+    }
+
+    #services-block img, #departments-block img, #contact-block img {
         width: 100%;
+        margin-bottom: 20px;
     }
 
-    .hero-image {
-        display: block;
-    }
-
-    .hero-image h2 {
-        font-size: 1.5rem;
-    }
-
-    .hero-image img { 
-        width: 100%;
-        object-fit: cover;
-    } 
-
-    #services-block, #contact-block {
-        flex-direction: column-reverse;
-    }
-
-    .block h2 {
+    .block .text-container {
         text-align: center;
-    }
-
-    #services-block img, #contact-block img, #departments-block img {
-        align-self: center;
-        width: 100%;
-        margin-bottom: 10px;
     }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-    #hero-section {
-        background-image: url(../images/hero-image-mobile.webp);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-    }
-
-    #services-block img, #contact-block img, #departments-block img {
-        align-self: center;
+    #services-block img, #departments-block img, #contact-block img {
         width: 100%;
-        margin-bottom: 10px;
-
-    }
-
-    #services-block, #contact-block {
-        flex-direction: column-reverse;
-    }
-
-    .hero-text button {
-        display: none;
-    }
-
-    .block {
-        margin-left: 0;
-        margin-right: 0;
-        width: 100%;
-    }
-
-    .hero-image {
-        width: 100%;
-        height: 50vh;
     }
 }
 
-@media screen and (min-width: 1024px) { 
-    .block {
-        padding: 40px;
-        margin: 40px 0; 
-        margin-left: 15%;
-        margin-right: 15%;
-    }
 
-    .block h2 {
-        color: var(--primary-color-dark);
-        font-size: 2.5rem;
-    }
 
-    #services-block, #departments-block, #contact-block {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
-        align-items: center;
-    }
-    
 }
-
