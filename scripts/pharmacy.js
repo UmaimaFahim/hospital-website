@@ -2,7 +2,7 @@ let cart = [];
 let favorites = [];
 
 document.addEventListener('DOMContentLoaded', function () { //Runs the code inside the function when the HTML content is fully loaded
-  loadMedicines();
+  loadMedicines()
   document.getElementById("buyNow").addEventListener("click", buyNow);
   document.getElementById("addToFavorites").addEventListener("click", addToFavorites);
   document.getElementById("applyFavorites").addEventListener("click", applyFavorites);
@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded', function () { //Runs the code insi
 // => is a shorthand way to write a function
 
 function loadMedicines() { //Defines the function
-  fetch('medicines.json') //Sends HTTP request to fetch data from medicines.json
+
+  return fetch('medicines.json') //Sends HTTP request to fetch data from medicines.json
     .then(response => response.json())//Processes the response from the fetch call, and converts it to a json object
     .then(data => { //After its converted to a json object, pass the fetched data to a parameter 'data'
       let container = document.getElementById("medicines"); //iterates over the keys of the first object in the data array (the medicines object)
@@ -49,12 +50,10 @@ function loadMedicines() { //Defines the function
       //If something goes wrong while fetching the json file or processing the data
       //The error message will be printed on the console
     });
-
-    favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-}
+  }
 
 function addToCart(name, price) {
-  let qty = document.getElementById(`qty-${name}`).value; //finds the qty input field for the selected medicine using its unique ID and retrieves the value entered by the user
+  let qty = parseInt(document.getElementById(`qty-${name}`).value); //finds the qty input field for the selected medicine using its unique ID and retrieves the value entered by the user
   let totalPrice = price * qty;
   let item = { name, price, qty, totalPrice }; //An object 'item' represents the selected medicine and its details
 
@@ -118,6 +117,10 @@ function addToFavorites() { //saves the cart items to local storage
 }
 
 function applyFavorites() {
+
+  favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+      console.log("Favorites loaded:", favorites); // Debugging log
+
   if (favorites.length > 0) { //checks if favorites is not empty
     cart = [...favorites]; //the spread operator copies all the items from the favorites array
     updateOrderSummary();
