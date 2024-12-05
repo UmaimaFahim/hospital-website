@@ -1,5 +1,5 @@
 let cart = [];
-// let favorites = JSON.parse(localStorage.getItem("favorites"));
+let favorites = [];
 
 document.addEventListener('DOMContentLoaded', function () { //Runs the code inside the function when the HTML content is fully loaded
   loadMedicines();
@@ -40,13 +40,17 @@ function loadMedicines() { //Defines the function
         //container is the HTML element with the ID "medicines"-- The main box that will hold everything
         //section contains all the medicine boxes for a single category 
         //appendChild puts the entire section into the container
+
       });
     })
+
     .catch(error => {
       console.error('Error fetching medicines:', error);
       //If something goes wrong while fetching the json file or processing the data
       //The error message will be printed on the console
     });
+
+    favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 }
 
 function addToCart(name, price) {
@@ -56,56 +60,57 @@ function addToCart(name, price) {
 
   // Check if the item is already in the cart and update it
   let existingItem = cart.find(cartItem => cartItem.name === name); //
-  if (existingItem) {
-    existingItem.qty += parseInt(qty);
-    existingItem.totalPrice = existingItem.qty * existingItem.price;
+  if (existingItem) { //If the item is already in the cart, 
+    existingItem.qty += parseInt(qty); //Updates the quantity
+    existingItem.totalPrice = existingItem.qty * existingItem.price; //and the total price
   } else {
-    cart.push(item);
+    cart.push(item); //if the item isnt in the cart, it adds a new item
   }
 
-  updateOrderSummary();
+  updateOrderSummary(); //calls this function to update order summary
 }
 
 function updateOrderSummary() {
-  let tableBody = document.querySelector("#orderSummary tbody");
-  tableBody.innerHTML = "";
-  let totalAmount = 0;
+  let tableBody = document.querySelector("#orderSummary tbody"); //selects the table body in the order summary section  
+  tableBody.innerHTML = ""; //Clears any existing rows in the table
+  let totalAmount = 0; 
 
-  cart.forEach((item, index) => {
-    let row = document.createElement('tr');
+  cart.forEach((item, index) => { //Loops through each item in the cart
+    let row = document.createElement('tr'); //creates a new table row 
     row.innerHTML = `
       <td>${item.name}</td>
       <td>LKR ${item.price}</td>
       <td>${item.qty}</td>
       <td>LKR ${item.totalPrice}</td>
-      <td><button onclick="removeFromCart(${index})">Remove</button></td>
-    `;
-    tableBody.appendChild(row);
-    totalAmount += item.totalPrice;
+      <td><button onclick="removeFromCart(${index})">Remove</button></td> 
+    `;// when the button is clicked
+    // when the button is clicked, the index of that item on the array is passed to the remove from cart function
+    tableBody.appendChild(row); //Adds row to the table
+    totalAmount += item.totalPrice; //Adds the total price of each item to the total amount
   });
 
-  let totalRow = document.createElement('tr');
+  let totalRow = document.createElement('tr'); //creates a new row to display the total amount
   totalRow.innerHTML = `
     <td colspan="3"><strong>Total</strong></td>
     <td><strong>LKR ${totalAmount}</strong></td>
   `;
-  tableBody.appendChild(totalRow);
+  tableBody.appendChild(totalRow); //adds the row to the table
 }
 
 function removeFromCart(index) {
-  cart.splice(index, 1);
-  updateOrderSummary();
+  cart.splice(index, 1); //removes the specified index from the cart array
+  updateOrderSummary(); //updates the order summary table
 }
 
 function buyNow() {
   // Implement logic to redirect to checkout.html and pass cart data
-  localStorage.setItem('cart', JSON.stringify(cart));
-  window.location.href = 'checkout.html';
+  localStorage.setItem('cart', JSON.stringify(cart)); //stores the current cart in the browser's local storage
+  window.location.href = 'checkout.html'; //redirects to the checkout page when buy now is clicked
 }
 
-function addToFavorites() {
-  if (cart.length > 0) {
-    localStorage.setItem("favorites", JSON.stringify(cart));
+function addToFavorites() { //saves the cart items to local storage
+  if (cart.length > 0) {  //makes sure the cart is not empty before before saving the items
+    localStorage.setItem("favorites", JSON.stringify(cart)); //stores the cart items as "favorites" in the local storage
     alert("Order added to favorites!");
   } else {
     alert("Your cart is empty. Add items before saving to favorites.");
@@ -113,11 +118,13 @@ function addToFavorites() {
 }
 
 function applyFavorites() {
-  if (favorites.length > 0) {
-    cart = [...favorites];
+  if (favorites.length > 0) { //checks if favorites is not empty
+    cart = [...favorites]; //the spread operator copies all the items from the favorites array
     updateOrderSummary();
     alert("Favorites applied!");
   } else {
     alert("No favorites found.");
   }
 }
+
+
