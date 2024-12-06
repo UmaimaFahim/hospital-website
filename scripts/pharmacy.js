@@ -25,10 +25,10 @@ function loadMedicines() { //Defines the function
           let medicineDiv = document.createElement('div'); //Creates a div element that will hold the details of a single medicine
           medicineDiv.classList.add('medicine'); //Adds a class named medicine to the medicineDiv for styling with css
           medicineDiv.innerHTML = `
-            <img src="${item.image}" alt="${item.name}">
+            <img src="${item.image}" alt="${item.description}">
             <h4>${item.name}</h4>
             <p>Price: LKR ${item.price}</p>
-            <input type="number" id="qty-${item.name}" value="1" min="1">
+            <input type="number" id="qty-${item.name}" value="5" min="5">
             <button onclick="addToCart('${item.name}', ${item.price})">Add to Cart</button>
           `;
           section.appendChild(medicineDiv);

@@ -1,41 +1,41 @@
 [{
     "analgesics": [
-      { "name": "Paracetamol", "price": 3.49, "image": "images/medicine/paracetamol.webp" },
-      { "name": "Ibuprofen", "price": 2.18, "image": "images/medicine/ibuprofen.webp" },
-      { "name": "Aspirin", "price": 3.26, "image": "images/medicine/aspirin.webp" },
-      { "name": "Naproxen", "price": 40.8, "image": "images/medicine/naproxen.webp" },
-      { "name": "Diclofenac", "price": 2.75, "image": "images/medicine/diclofenac.webp" },
-      { "name": "Ketorolac", "price": 32.37, "image": "images/medicine/ketorolac.webp" }
+      { "name": "Paracetamol", "description": "Paracetamol pills in a red box", "price": 3.49, "image": "images/medicine/paracetamol.webp" },
+      { "name": "Ibuprofen", "description": "Ibuprofen pills in a red box with white accents", "price": 2.18, "image": "images/medicine/ibuprofen.webp" },
+      { "name": "Aspirin", "description": "Aspirin pills in a green box", "price": 3.26, "image": "images/medicine/aspirin.webp" },
+      { "name": "Naproxen", "description": "Naproxen pills in a white box with yellow accents", "price": 40.8, "image": "images/medicine/naproxen.webp" },
+      { "name": "Diclofenac", "description": "Orange diclofenac pills in a white and orange box", "price": 2.75, "image": "images/medicine/diclofenac.webp" },
+      { "name": "Ketorolac", "description": "Ketorolac pills in a grey box with blue accents", "price": 32.37, "image": "images/medicine/ketorolac.webp" }
     ],
     "antibiotics": [
-      { "name": "Amoxicillin", "price": 16.56, "image": "images/medicine/amoxicillin.webp" },
-      { "name": "Ciprofloxacin", "price": 42.00, "image": "images/medicine/ciprofloxacin.webp" },
-      { "name": "Doxycycline", "price": 10.92, "image": "images/medicine/doxycycline.webp" },
-      { "name": "Metronidazole", "price": 2.58, "image": "images/medicine/metronidazole.webp" },
-      { "name": "Azithromycin", "price": 80.00, "image": "images/medicine/azithromycin.webp" },
-      { "name": "Cephalexin", "price": 10.63, "image": "images/medicine/cephalexin.webp" }
+      { "name": "Amoxicillin", "description": "Amoxicillin pills in a red box", "price": 16.56, "image": "images/medicine/amoxicillin.webp" },
+      { "name": "Ciprofloxacin", "description": "Ciprofloxacin pills in a white box with blue accents", "price": 42.00, "image": "images/medicine/ciprofloxacin.webp" },
+      { "name": "Doxycycline", "description": "Doxycycline pills in a white box with blue accents", "price": 10.92, "image": "images/medicine/doxycycline.webp" },
+      { "name": "Metronidazole", "description": "Metronidazole pills in a white box with blue accents", "price": 2.58, "image": "images/medicine/metronidazole.webp" },
+      { "name": "Azithromycin", "description": "Azithromycin in a white box with pink accents", "price": 80.00, "image": "images/medicine/azithromycin.webp" },
+      { "name": "Cephalexin", "description": "Cephalexin pills in a white box with shades of blue", "price": 10.63, "image": "images/medicine/cephalexin.webp" }
     ],
     "antidepressants": [
-      { "name": "Fluoxetine", "price": 6.90, "image": "images/medicine/fluoxetine.webp" },
-      { "name": "Sertraline", "price": 11.50, "image": "images/medicine/sertraline.webp" },
-      { "name": "Escitalopram", "price": 60.99, "image": "images/medicine/escitalopram.webp" },
-      { "name": "Venlafaxine", "price": 30.77, "image": "images/medicine/venlafaxine.webp" },
-      { "name": "Bupropion", "price": 32.62, "image": "images/medicine/bupropion.webp" },
-      { "name": "Duloxetine", "price": 40.00, "image": "images/medicine/duloxetine.webp" }
+      { "name": "Fluoxetine", "description": "Fluoxetine pills in a white box", "price": 6.90, "image": "images/medicine/fluoxetine.webp" },
+      { "name": "Sertraline", "description": "Sertraline pills in a green box", "price": 11.50, "image": "images/medicine/sertraline.webp" },
+      { "name": "Escitalopram", "description": "Escitalopram pills in a white box", "price": 60.99, "image": "images/medicine/escitalopram.webp" },
+      { "name": "Venlafaxine", "description": "Venlafaxine pills in a white box with blue accents", "price": 30.77, "image": "images/medicine/venlafaxine.webp" },
+      { "name": "Bupropion", "description": "Bupropion  pills in a white box with orange accents", "price": 32.62, "image": "images/medicine/bupropion.webp" },
+      { "name": "Duloxetine", "description": "Duloxetine pills in a white box with green accents", "price": 40.00, "image": "images/medicine/duloxetine.webp" }
     ],
     "antihistamines": [
-      { "name": "Loratadine", "price": 8.00, "image": "images/medicine/loratadine.webp" },
-      { "name": "Cetirizine", "price": 2.75, "image": "images/medicine/cetirizine.webp" },
-      { "name": "Diphenhydramine", "price": 12.74, "image": "images/medicine/diphenhydramine.webp" },
-      { "name": "Fexofenadine", "price": 7.00, "image": "images/medicine/fexofenadine.webp" }
+      { "name": "Loratadine", "description": "Loratadine pills in a white box with yellow accents", "price": 8.00, "image": "images/medicine/loratadine.webp" },
+      { "name": "Cetirizine", "description": "Cetirizine pils in a white box with blu and pink accents", "price": 2.75, "image": "images/medicine/cetirizine.webp" },
+      { "name": "Diphenhydramine", "description": "Diphenhydramine pills in a purple box", "price": 12.74, "image": "images/medicine/diphenhydramine.webp" },
+      { "name": "Fexofenadine", "description": "Fexofenadine pills in a purple box", "price": 7.00, "image": "images/medicine/fexofenadine.webp" }
     ],
     "antihypertensives": [
-      { "name": "Amlodipine", "price": 2.07, "image": "images/medicine/amlodipine.webp" },
-      { "name": "Losartan", "price": 3.50, "image": "images/medicine/losartan.webp" },
-      { "name": "Enalapril", "price": 2.88, "image": "images/medicine/enalapril.webp" },
-      { "name": "Metoprolol", "price": 22.23, "image": "images/medicine/metoprolol.webp" },
-      { "name": "Hydrochlorothiazide", "price": 1.05, "image": "images/medicine/hydrochlorothiazide.webp" },
-      { "name": "Valsartan", "price": 395.00, "image": "images/medicine/valsartan.webp" }
+      { "name": "Amlodipine", "description": "Amlodipine pills in a white box", "price": 2.07, "image": "images/medicine/amlodipine.webp" },
+      { "name": "Losartan", "description": "Losartan pills in a white box", "price": 3.50, "image": "images/medicine/losartan.webp" },
+      { "name": "Enalapril", "description": "Enalapril pills in a white box with orange and blue accents", "price": 2.88, "image": "images/medicine/enalapril.webp" },
+      { "name": "Metoprolol", "description": "Metoprolol pills in a white box with blue accents", "price": 22.23, "image": "images/medicine/metoprolol.webp" },
+      { "name": "Hydrochlorothiazide", "description": "Hydrochlorothiazide", "price": 1.05, "image": "images/medicine/hydrochlorothiazide.webp" },
+      { "name": "Valsartan", "description": "Valsartan pills in a white box with orange accents", "price": 395.00, "image": "images/medicine/valsartan.webp" }
     ]
   }]
   

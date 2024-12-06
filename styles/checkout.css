@@ -107,8 +107,8 @@ button:hover {
 }
 
 .order-summary th {
-    background-color: var(--primary-color);
-    color: var(--white);
+    background-color: var(--white);
+    color: #0044ff;
 }
 
 /* Hidden Fields */

@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const deliveryAddress = document.getElementById("deliveryAddress");
     const form = document.getElementById("checkoutForm");
     const summaryTable = document.getElementById("summaryTable").querySelector("tbody");
+    const cardNumberInput = document.getElementById("cardNumber");
+    const cvvInput = document.getElementById("cvv");
   
     // Load order summary from localStorage
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -39,6 +41,43 @@ document.addEventListener("DOMContentLoaded", () => {
         cardDetails.classList.toggle("hidden", input.value !== "card");
       });
     });
+
+      // Validate Card Number Length (16 digits)
+    cardNumberInput.addEventListener("input", function (e) {
+      const value = e.target.value;
+      if (value.length > 16) {
+        e.target.value = value.slice(0, 16); // Trim to 16 digits
+      }
+    });
+
+    // Validate CVV Length (3 digits)
+    cvvInput.addEventListener("input", function (e) {
+      const value = e.target.value;
+      if (value.length > 3) {
+        e.target.value = value.slice(0, 3); // Trim to 3 digits
+      }
+    });
+
+    // Form Submission Validation
+    form.addEventListener("submit", function (e) {
+      const cardNumber = cardNumberInput.value;
+      const cvv = cvvInput.value;
+
+      if (cardNumber.length !== 16 || !/^\d+$/.test(cardNumber)) {
+        alert("Please enter a valid 16-digit card number.");
+        e.preventDefault(); // Prevent form submission
+        return;
+      }
+
+      if (cvv.length !== 3 || !/^\d+$/.test(cvv)) {
+        alert("Please enter a valid 3-digit CVV.");
+        e.preventDefault(); // Prevent form submission
+        return;
+      }
+
+      alert("Form submitted successfully!");
+    });
+  
   
     // Toggle delivery address when delivery method changes
     Array.from(form.delivery).forEach(input => {
