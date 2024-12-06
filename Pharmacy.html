@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="hospital, ">
     <title>Pharmacy</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    <!-- <link rel="stylesheet" href="styles/styles.css"> -->
     <link rel="stylesheet" href="styles/general-styles.css">
     <link rel="stylesheet" href="styles/pharmacy.css">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
@@ -59,30 +59,31 @@
             <h1>Order Medicines</h1>
     
             <div id="medicines"></div>
-        
-            <h2>Order Summary</h2>
-            <table id="orderSummary">
-            <thead>
-                <tr>
-                <th class="round">Unit Name</th>
-                <th>Unit Price</th>
-                <th>Qty (Units Bought)</th>
-                <th>Total</th>
-                <th class="round">Remove</th>
-                </tr>
-            </thead>
-            <tbody>
-            </tbody>
-            </table>
+
+            <div class="order-summary">
+                <h2>Order Summary</h2>
+                <table id="summaryTable">
+                    <thead>
+                        <tr>
+                            <th>Item Name</th>
+                            <th>Price</th>
+                            <th>Qty</th>
+                            <th>Total</th>
+                            <th>Remove</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    
+                    </tbody>
+                </table>
+            </div>
             
-            <div>
-            <button id="buyNow">Buy Now</button>
-            </div>
+            <div><button id="buyNow">Buy Now</button></div>
         
-            <div>
-            <button id="addToFavorites">Add to Favorites</button>
-            <button id="applyFavorites">Apply Favorites</button>
-            </div>
+            <div><button id="addToFavorites">Add to Favorites</button>
+            <button id="applyFavorites">Apply Favorites</button></div>
+            
+            
             
             <script src="medicines.json"></script>
             <script src="./scripts/pharmacy.js" defer></script>
@@ -107,7 +108,7 @@
 
             <div class="footer-section" id="map">
                 <h3>Location</h3>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15843.615170920637!2d79.83448168715819!3d6.9021080000000055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2596094db18b9%3A0xb0ffe5ca94529291!2sDurdans%20Hospital!5e0!3m2!1sen!2slk!4v1725215360806!5m2!1sen!2slk" description="Link to the map of the main hospital branch" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15843.615170920637!2d79.83448168715819!3d6.9021080000000055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2596094db18b9%3A0xb0ffe5ca94529291!2sDurdans%20Hospital!5e0!3m2!1sen!2slk!4v1725215360806!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
 

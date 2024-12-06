@@ -64,13 +64,12 @@ body {
 }
 
 .hero img {
-    
-    max-width: auto;
+    width: auto;
     height: 40vh;
     border-radius: 10px;
 }
 
-h3 {
+main h3 {
     color: var(--primary-color-dark);
 }
 
@@ -248,42 +247,29 @@ section {
     transform: scale(1.05);
 }
 
-/* Order Summary Table */
-#orderSummary {
+/* Order Summary Styles */
+.order-summary table {
     width: 100%;
-    margin-top: 20px;
     border-collapse: collapse;
-    text-align: center;
+    margin-top: 1rem;
+    padding-inline: 10px;
 }
 
-#orderSummary th {
+.order-summary-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.order-summary th, .order-summary td {
+    border: 1px solid var(--primary-color);
+    padding: 0.75rem;
+    text-align: left;
+    color: var(--text-dark);
+}
+
+.order-summary th {
     background-color: var(--primary-color);
     color: var(--white);
-    padding: 10px;
-    font-weight: 600;
-}
-
-#orderSummary td {
-    padding: 10px;
-    border: 1px solid var(--primary-light);
-}
-
-#orderSummary tr:nth-child(even) {
-    background-color: var(--primary-light);
-}
-
-#orderSummary button {
-    background-color: var(--primary-color);
-    color: var(--white);
-    border: none;
-    padding: 5px 10px;
-    font-size: 0.9rem;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#orderSummary button:hover {
-    background-color: var(--primary-dark);
 }
 
 /* Footer */
@@ -327,6 +313,10 @@ footer p {
 }
 
 @media (max-width: 480px) {
+    #orderSummary {
+        width: auto;
+    }
+
     .medicine-item {
         width: 100%;
     }
@@ -339,5 +329,12 @@ footer p {
         display: block;
         font-size: 1.5rem;
         cursor: pointer;
+    }
+}
+
+@media (max-width: 600px) {
+    table td, table th {
+        padding: 0.25rem;
+        font-size: 0.9rem;
     }
 }

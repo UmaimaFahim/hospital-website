@@ -53,7 +53,8 @@ function loadMedicines() { //Defines the function
   }
 
 function addToCart(name, price) {
-  let qty = parseInt(document.getElementById(`qty-${name}`).value); //finds the qty input field for the selected medicine using its unique ID and retrieves the value entered by the user
+  qtyVal = document.getElementById(`qty-${name}`).value;
+  let qty = parseFloat(qtyVal); //finds the qty input field for the selected medicine using its unique ID and retrieves the value entered by the user
   let totalPrice = price * qty;
   let item = { name, price, qty, totalPrice }; //An object 'item' represents the selected medicine and its details
 
@@ -70,7 +71,7 @@ function addToCart(name, price) {
 }
 
 function updateOrderSummary() {
-  let tableBody = document.querySelector("#orderSummary tbody"); //selects the table body in the order summary section  
+  let tableBody = document.querySelector("#summaryTable tbody"); //selects the table body in the order summary section  
   tableBody.innerHTML = ""; //Clears any existing rows in the table
   let totalAmount = 0; 
 
@@ -80,7 +81,7 @@ function updateOrderSummary() {
       <td>${item.name}</td>
       <td>LKR ${item.price}</td>
       <td>${item.qty}</td>
-      <td>LKR ${item.totalPrice}</td>
+      <td>LKR ${item.totalPrice.toFixed(2)}</td>
       <td><button onclick="removeFromCart(${index})">Remove</button></td> 
     `;// when the button is clicked
     // when the button is clicked, the index of that item on the array is passed to the remove from cart function
@@ -90,8 +91,8 @@ function updateOrderSummary() {
 
   let totalRow = document.createElement('tr'); //creates a new row to display the total amount
   totalRow.innerHTML = `
-    <td colspan="3"><strong>Total</strong></td>
-    <td><strong>LKR ${totalAmount}</strong></td>
+    <td colspan="4" data-label="Total"><strong>Total</strong></td>
+    <td><strong>LKR ${totalAmount.toFixed(2)}</strong></td>
   `;
   tableBody.appendChild(totalRow); //adds the row to the table
 }
@@ -103,11 +104,17 @@ function removeFromCart(index) {
 
 function buyNow() {
   // Implement logic to redirect to checkout.html and pass cart data
+  if (cart.length > 0){
+    window.location.href = 'checkout.html'; //redirects to the checkout page when buy now is clicked
+  } else {
+    alert("Your cart is empty. Add items to make a purchase.")
+  }
+
   localStorage.setItem('cart', JSON.stringify(cart)); //stores the current cart in the browser's local storage
-  window.location.href = 'checkout.html'; //redirects to the checkout page when buy now is clicked
+  
 }
 
-function addToFavorites() { //saves the cart items to local storage
+function addToFavorites() { 
   if (cart.length > 0) {  //makes sure the cart is not empty before before saving the items
     localStorage.setItem("favorites", JSON.stringify(cart)); //stores the cart items as "favorites" in the local storage
     alert("Order added to favorites!");

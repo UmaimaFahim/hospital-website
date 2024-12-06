@@ -59,62 +59,73 @@ document.addEventListener("DOMContentLoaded", () => {
       // Display confirmation with order summary
       const confirmationDiv = document.createElement("div");
       confirmationDiv.innerHTML = `
-        <h2>Payment Confirmation</h2>
-        <h3>Personal Details</h3>
-        <p><strong>Name:</strong> ${details.name}</p>
-        <p><strong>Age:</strong> ${details.age}</p>
-        <p><strong>Email:</strong> ${details.email}</p>
-        <p><strong>Contact:</strong> ${details.contact}</p>
-  
-        <h3>Payment Method</h3>
-        <p>${paymentMethod}</p>
-        ${
-          paymentMethod === "Card"
-            ? `<p><strong>Card Number:</strong> ${details.cardNumber}</p>
-               <p><strong>Expiry Date:</strong> ${details.expiryDate}</p>`
-            : ""
-        }
-  
-        <h3>Delivery Method</h3>
-        <p>${deliveryMethod}</p>
-        ${
-          deliveryMethod === "Delivery"
-            ? `<p><strong>Address:</strong> ${details.address}</p>`
-            : ""
-        }
-  
-        <h3>Order Summary</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>Item</th>
-              <th>Qty</th>
-              <th>Price</th>
-              <th>Total</th>
-            </tr>
-          </thead>
-          <tbody>
-            ${cart
-              .map(
-                item => `
+      <div class="payment-confirmation">
+          <h2>Payment Confirmation</h2>
+          
+          <h3>Personal Details</h3>
+          <table>
+              <tr><th>Name</th><td>${details.name}</td></tr>
+              <tr><th>Age</th><td>${details.age}</td></tr>
+              <tr><th>Email</th><td>${details.email}</td></tr>
+              <tr><th>Contact</th><td>${details.contact}</td></tr>
+          </table>
+          
+          <h3>Payment Method</h3>
+          <table>
+              <tr><th>Method</th><td>${paymentMethod}</td></tr>
+              ${
+                paymentMethod === "Card"
+                  ? `<tr><th>Card Number</th><td>${details.cardNumber}</td></tr>
+                     <tr><th>Expiry Date</th><td>${details.expiryDate}</td></tr>`
+                  : ""
+              }
+          </table>
+          
+          <h3>Delivery Method</h3>
+          <table>
+              <tr><th>Method</th><td>${deliveryMethod}</td></tr>
+              ${
+                deliveryMethod === "Delivery"
+                  ? `<tr><th>Address</th><td>${details.address}</td></tr>`
+                  : ""
+              }
+          </table>
+          
+          <h3>Order Summary</h3>
+          <table class="summary-table">
+              <thead>
                   <tr>
-                    <td>${item.name}</td>
-                    <td>${item.qty}</td>
-                    <td>LKR ${item.price}</td>
-                    <td>LKR ${item.totalPrice}</td>
+                      <th>Item</th>
+                      <th>Qty</th>
+                      <th>Price</th>
+                      <th>Total</th>
                   </tr>
-                `
-              )
-              .join("")}
-            <tr>
-              <td colspan="3"><strong>Total</strong></td>
-              <td><strong>LKR ${total}</strong></td>
-            </tr>
-          </tbody>
-        </table>
+              </thead>
+              <tbody>
+                  ${cart
+                    .map(
+                      item => `
+                        <tr>
+                            <td>${item.name}</td>
+                            <td>${item.qty}</td>
+                            <td>LKR ${item.price}</td>
+                            <td>LKR ${item.totalPrice}</td>
+                        </tr>`
+                    )
+                    .join("")}
+                  <tr>
+                      <td colspan="3"><strong>Total</strong></td>
+                      <td><strong>LKR ${total}</strong></td>
+                  </tr>
+              </tbody>
+          </table>
+
+          <p class="message">Thank you for purchasing from EKA's Online Pharmacy. Your order will be delivered within the next 24 hours!</p>
+          
+          <button id="returnToPharmacy">Return to Pharmacy</button>
+      </div>
+  `;
   
-        <button id="returnToPharmacy">Return to Pharmacy</button>
-      `;
   
       document.body.innerHTML = "";
       document.body.appendChild(confirmationDiv);

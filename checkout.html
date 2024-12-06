@@ -4,10 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
+    <link rel="stylesheet" href="styles/general-styles.css">
     <link rel="stylesheet" href="styles/checkout.css">
+    
+
+
 </head>
 <body>
     <header>
+        <div class="logo">
+            <a href="index.html">
+            <img src="images/logo.png" alt="Logo of EKA Hospital featuring a heart-shaped design with a cross integrated into it.">
+            </a>
+        </div>
         <h1>Checkout</h1>
     </header>
 
@@ -19,13 +28,13 @@
                 <input type="text" id="name" name="name" required>
 
                 <label for="age">Age:</label>
-                <input type="number" id="age" name="age" min="1" required>
+                <input type="number" id="age" name="age" min="18" required>
 
                 <label for="email">Email Address:</label>
                 <input type="email" id="email" name="email" required>
 
                 <label for="contact">Contact Number:</label>
-                <input type="tel" id="contact" name="contact" required>
+                <input type="tel" id="contact" name="contact" maxlength="10" required>
             </section>
 
             <section class="payment-details">
@@ -34,6 +43,7 @@
                     <input type="radio" name="payment" value="card" required>
                     Card
                 </label>
+                
                 <label>
                     <input type="radio" name="payment" value="cash">
                     Cash on Delivery
@@ -41,13 +51,15 @@
 
                 <div id="cardDetails" class="hidden">
                     <label for="cardNumber">Card Number:</label>
-                    <input type="text" id="cardNumber" name="cardNumber">
+                    <small>Enter a 16-digit card number</small>
+                    <input type="number" id="cardNumber" name="cardNumber">
 
                     <label for="expiryDate">Expiry Date:</label>
-                    <input type="month" id="expiryDate" name="expiryDate">
+                    <input type="month" id="expiryDate" name="expiryDate" min="2025-01">
 
                     <label for="cvv">CVV:</label>
-                    <input type="text" id="cvv" name="cvv" maxlength="3">
+                    <small>Enter a 3-digit CVV</small>
+                    <input type="number" id="cvv" name="cvv" >
                 </div>
             </section>
 
@@ -63,8 +75,17 @@
                 </label>
 
                 <div id="deliveryAddress" class="hidden">
-                    <label for="address">Delivery Address:</label>
-                    <textarea id="address" name="address"></textarea>
+                    <label for="house-num">House Number</label>
+                    <input type="text" id="house-num">
+
+                    <label for="street-name">Street Name</label>
+                    <input type="text" id="street-name" name="street-name">
+
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city">
+
+                    <label for="post-code">Postal Code</label>
+                    <input type="text" id="post-code" name="post-code" maxlength="5">
                 </div>
             </section>
 

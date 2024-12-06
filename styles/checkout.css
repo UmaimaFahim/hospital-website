@@ -1,0 +1,210 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-color-light);
+    color: var(--text-dark);
+}
+
+header {
+    padding: 1rem;
+    text-align: center;
+    color: var(--white);
+    justify-content: flex-start;
+}
+
+h1 {
+    padding-right: 10px;
+    padding-left: 1.5rem;
+}
+
+h1, h2 {
+    color: var(--primary-color-dark);
+    margin-bottom: 1rem;
+}
+
+h2 {
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+
+main {
+    margin: 2rem auto;
+    padding: 1rem;
+    max-width: 900px;
+    background-color: var(--white);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+input[type="radio"] {
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+/* Button Styles */
+button {
+    background-color: var(--primary-color-dark);
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+button:hover {
+    background-color: var(--primary-color);
+}
+
+.order-summary-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Order Summary Styles */
+.order-summary table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.order-summary-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.order-summary th, .order-summary td {
+    border: 1px solid var(--primary-color);
+    padding: 0.75rem;
+    text-align: left;
+    color: var(--text-dark);
+}
+
+.order-summary th {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* Hidden Fields */
+.hidden {
+    display: none;
+}
+
+/* Sections */
+section {
+    background-color: var(--primary-color-light);
+    padding: 1.5rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+}
+
+/* Payment Confirmation Styles */
+.payment-confirmation {
+    background-color: var(--primary-color-light);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 2rem auto;
+    color: var(--text-dark);
+    font-family: Arial, sans-serif;
+}
+
+.payment-confirmation h2 {
+    color: var(--primary-color-dark);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+
+.payment-confirmation table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+.payment-confirmation th,
+.payment-confirmation td {
+    border: 1px solid var(--primary-color);
+    padding: 0.75rem;
+    text-align: left;
+}
+
+.payment-confirmation th {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+}
+
+.payment-confirmation td {
+    background-color: var(--white);
+}
+
+.payment-confirmation p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+.payment-confirmation .summary-table th,
+.payment-confirmation .summary-table td {
+    text-align: right;
+}
+
+.payment-confirmation button {
+    display: block;
+    width: 100%;
+    background-color: var(--primary-color-dark);
+    color: var(--white);
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.payment-confirmation button:hover {
+    background-color: var(--primary-color);
+}
+
+.message {
+    text-align: center; /* Centers the text */
+    font-size: 1rem; /* Adjusts the font size to make it readable but not overwhelming */
+    font-weight: 500; /* Adds slight emphasis to the text */
+    color: #333333; /* Neutral dark color to maintain readability */
+    margin-top: 15px; /* Adds space above the text */
+    margin-bottom: 20px; /* Adds space below the text */
+    padding: 10px; /* Adds padding for better spacing */
+    background-color: #f2f8ff; /* Soft blue background to match your page theme */
+    border-radius: 5px; /* Rounds the corners for a smooth design */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for a modern look */
+}
+
