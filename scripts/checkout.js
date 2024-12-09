@@ -60,9 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    alert("Form submitted successfully!");
   });
-
 
   // Toggle delivery address when delivery method changes
   Array.from(form.delivery).forEach(input => {

@@ -82,7 +82,7 @@ function updateOrderSummary() {
       <td>LKR ${item.price}</td>
       <td>${item.qty}</td>
       <td>LKR ${item.totalPrice.toFixed(2)}</td>
-      <td><button onclick="removeFromCart(${index})">Remove</button></td> 
+      <td><button id="remove-button" onclick="removeFromCart(${index})">Remove</button></td> 
     `;// when the button is clicked
     // when the button is clicked, the index of that item on the array is passed to the remove from cart function
     tableBody.appendChild(row); //Adds row to the table
